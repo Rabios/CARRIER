@@ -71,7 +71,7 @@ ALint alutGetMajorVersion (void);
 ALint alutGetMinorVersion (void);
 
 ALboolean alutSleep (ALfloat duration);
- void alutUnloadWAV (ALenum format, ALvoid *data, ALsizei size, ALsizei frequency);
+void alutUnloadWAV (ALenum format, ALvoid *data, ALsizei size, ALsizei frequency);
 ]])
 
 if ffi.os == "OSX" then

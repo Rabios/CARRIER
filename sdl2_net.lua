@@ -344,9 +344,9 @@ _N.SDLNet_SocketReady = function(sock)
 end
 
 setmetatable(_N, {
-	__index = function(table, key)
-		return SDL2_NET[key]
-	end
+  __index = function(table, key)
+	return SDL2_NET[key]
+  end
 })
 
 return _N

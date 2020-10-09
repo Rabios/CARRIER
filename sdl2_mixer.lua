@@ -573,9 +573,9 @@ local _M = {
 }
 
 setmetatable(_M, {
-	__index = function(table, key)
-		return SDL2_MIXER[key]
-	end
+  __index = function(table, key)
+    return SDL2_MIXER[key]
+  end
 })
 
 return _M

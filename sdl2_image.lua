@@ -105,7 +105,6 @@ int IMG_SavePNG(SDL_Surface *surface, const char *file);
 int IMG_SavePNG_RW(SDL_Surface *surface, SDL_RWops *dst, int freedst);
 int IMG_SaveJPG(SDL_Surface *surface, const char *file, int quality);
 int IMG_SaveJPG_RW(SDL_Surface *surface, SDL_RWops *dst, int freedst, int quality);
-
 ]])
 
 return ffi.load("SDL2_image")

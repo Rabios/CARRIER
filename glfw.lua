@@ -1,7 +1,6 @@
 local ffi = require("ffi")
 local bor = require("bit").bor
 ffi.cdef([[
-
 // glfw3.h
 /*************************************************************************
 * GLFW 3.3 - www.glfw.org
@@ -538,9 +537,9 @@ local _GLFW = {
 }
 
 setmetatable(_GLFW, {
-	__index = function(table, key)
-		return GLFW[key]
-	end
+  __index = function(table, key)
+	return GLFW[key]
+  end
 })
 
 return _GLFW
