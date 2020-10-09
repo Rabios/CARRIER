@@ -3117,8 +3117,9 @@ static const int SDL_WINDOWPOS_CENTERED = SDL_WINDOWPOS_CENTERED_MASK;
 SDL_Thread * SDL_CreateThread(SDL_ThreadFunction fn, const char *name, void *data);
 SDL_Thread * SDL_CreateThreadWithStackSize(int ( * fn) (void *),const char *name, const size_t stacksize, void *data);
 ]])
-            
-local SDL2 = ffi.load("SDL2") -- Load SDL2 directly!
+
+if not ILUT_USE_SDL then ILUT_USE_SDL = true end
+local SDL2 = ffi.load("SDL2")
 
 local _Q = {
   SDL_WINDOWPOS_UNDEFINED_DISPLAY = function(X)

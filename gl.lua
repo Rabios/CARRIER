@@ -6510,7 +6510,8 @@ typedef void (* PFNGLFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC) (GLenum target, GLenum 
 void glFramebufferTextureMultiviewOVR (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews);
 
 enum { GL_OVR_multiview2 = 1 };
-
 ]])
+
+if not ILUT_USE_OPENGL then ILUT_USE_OPENGL = true end
 
 return ffi.load(ffi.os == "Windows" and "opengl32" or "GL")
